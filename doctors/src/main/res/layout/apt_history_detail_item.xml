@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.HisDetailItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+    <com.rafakob.drawme.DrawMeLinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> callback.onClick(data)}">
+        <LinearLayout
+            android:id="@+id/llInterest"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_line_color">
+
+            <TextView
+                android:id="@+id/tvChooseInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="8dp"
+                android:layout_weight="1"
+                android:text="@{data.test}"
+                android:textColor="@android:color/black"
+                android:textSize="16sp"
+                android:typeface="normal" />
+            <com.rafakob.drawme.DrawMeButton
+                android:id="@+id/btnReport"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tvFeedbackText"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="7dp"
+                android:textAllCaps="false"
+                android:text="@string/txt_view_report"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:onClick="@{() -> callback.onClick(data)}"
+                app:dm_radius="4dp"
+                android:textSize="12sp"
+                app:dm_backColor="@color/colorAccent"
+                app:dm_backColorPressed="@android:color/holo_red_dark"
+                app:dm_backColorDisabled="@android:color/white" />
+
+        </LinearLayout>
+        <!--    <view
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#E1E1E1"/>-->
+
+    </com.rafakob.drawme.DrawMeLinearLayout>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+ <RelativeLayout
+     android:id="@+id/rlUserId"
+     android:background="@color/bright_turquoise"
+     android:layout_width="match_parent"
+     android:layout_height="110dp">
+
+  <TextView
+      android:id="@+id/tvEnterUserId"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:layout_marginStart="40dp"
+      android:layout_marginEnd="40dp"
+      android:layout_marginTop="12dp"
+      android:text="@string/text_enter_user_id"
+      android:textColor="@color/colorAccent"
+      android:textSize="16sp"
+      android:typeface="normal" />
+  <EditText
+      android:id="@+id/etUserId"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentLeft="true"
+      android:layout_alignParentStart="true"
+      android:layout_below="@+id/tvEnterUserId"
+      android:layout_marginLeft="12dp"
+      android:layout_marginStart="40dp"
+      android:layout_marginEnd="40dp"
+      android:layout_marginRight="12dp"
+      android:textSize="16sp"
+      android:layout_marginTop="10dp"
+      android:paddingBottom="10dp"
+      android:background="@drawable/edit_text_line_blue"
+      android:typeface="normal"
+      android:ems="10"
+      android:textColor="@color/colorAccent"
+      android:inputType="number"
+      android:text="12345678" />
+
+ </RelativeLayout>
+
+ <me.dm7.barcodescanner.zxing.ZXingScannerView
+
+     android:layout_below="@+id/rlUserId"
+     android:id="@+id/scannerView"
+     android:layout_width="match_parent"
+     android:layout_height="match_parent"/>
+
+ <com.rafakob.drawme.DrawMeTextView
+     android:id="@+id/tvsOr"
+     android:layout_width="40dp"
+     android:layout_height="40dp"
+     android:layout_marginTop="88dp"
+     android:layout_centerHorizontal="true"
+     android:layout_marginRight="12dp"
+     android:gravity="center"
+     android:text="OR"
+     android:textAlignment="center"
+     android:textColor="@android:color/black"
+     android:textSize="14sp"
+     app:dm_backColor="@android:color/white"
+     app:dm_radius="28dp" />
+
+ <TextView
+     android:id="@+id/tvPoitAt"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_below="@+id/tvsOr"
+     android:layout_centerHorizontal="true"
+     android:layout_marginTop="20dp"
+     android:textSize="16sp"
+     android:gravity="center_horizontal"
+     android:text="@string/text_scan_code"
+     android:textColor="@android:color/white"
+     android:typeface="normal" />
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.LabNearByUItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        tools:context="com.think360.pro.healthguru.doctors.activities.DoctorsActivity"
+        android:onClick="@{() -> callback.onClick(data)}">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="#F3F3F3"
+            android:layout_alignParentTop="true"/>
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/user_1"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp" />
+        <TextView
+            android:id="@+id/tvLabName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{data.labName}"
+            android:textSize="14sp"
+            android:textColor="#333333"
+            android:textStyle="bold"
+            android:typeface="normal"
+            android:layout_alignTop="@+id/ivProfileImage"
+            android:layout_toRightOf="@+id/ivProfileImage"
+            android:layout_toEndOf="@+id/ivProfileImage"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+     <!--   android:text="@{data.labName}"
+        android:text="@{data.MNumber}"
+        android:text="@{data.labAddress}"-->
+<LinearLayout
+    android:id="@+id/llMobile"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_toRightOf="@+id/ivProfileImage"
+    android:layout_toEndOf="@+id/ivProfileImage"
+    android:layout_marginTop="4dp"
+    android:layout_marginLeft="7dp"
+    android:layout_marginStart="7dp"
+    android:layout_below="@+id/tvLabName">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/user_phone"/>
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/tvmNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#333333"
+        android:layout_marginTop="2dp"
+        android:text="@{data.MNumber}"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        android:typeface="normal" />
+</LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivProfileImage"
+            android:layout_toEndOf="@+id/ivProfileImage"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="14dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginStart="7dp"
+            android:layout_below="@+id/llMobile">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:srcCompat="@drawable/location"/>
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#333333"
+                android:text="@{data.labAddress}"
+                android:gravity="left"
+                android:textStyle="normal"
+                android:typeface="normal" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

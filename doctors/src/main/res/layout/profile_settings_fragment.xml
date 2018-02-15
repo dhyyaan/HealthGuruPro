@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<RelativeLayout
+    android:background="@color/bright_turquoise"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/user_1"
+        app:civ_border_color="#68F5EC"
+        app:civ_border_width="5dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="5"
+        app:civ_shadow_color="#CAFFFF"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/cIvProfilePic" />
+
+    <ImageView
+        android:id="@+id/ivProfileImageEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cIvProfilePic"
+        android:layout_alignRight="@+id/cIvProfilePic"
+        android:layout_alignTop="@+id/cIvProfilePic"
+        android:layout_marginEnd="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        app:srcCompat="@drawable/edit" />
+
+    <TextView
+        android:id="@+id/tvProfileName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sukhdeep Kaur"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="14sp"
+        android:typeface="normal"
+        android:layout_below="@+id/cIvProfilePic"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rvProfile"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/white"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tvProfileName"
+        android:layout_above="@+id/llContact" />
+
+    <LinearLayout
+        android:id="@+id/llContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:background="#F3F3F3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvContactUs"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignLeft="@+id/cIvProfilePic"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/txt_contact_us"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:typeface="normal" />
+
+        <ImageView
+            android:id="@+id/ivEmail"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="10dp"
+            app:srcCompat="@drawable/user_email" />
+
+        <ImageView
+            android:id="@+id/ivPhone"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            app:srcCompat="@drawable/user_phone"
+            android:layout_marginLeft="10dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+</layout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.ChooseItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+<com.rafakob.drawme.DrawMeLinearLayout
+         android:orientation="vertical"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:onClick="@{() -> callback.onClick(data)}">
+    <LinearLayout
+        android:id="@+id/llInterest"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edit_text_line_color">
+
+        <TextView
+            android:id="@+id/tvChooseInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="14dp"
+            android:layout_weight="1"
+            android:text="@{data.item}"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:typeface="normal" />
+
+        <ImageView
+            android:id="@+id/ivForward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:visibility="@{data.visibility ? View.VISIBLE : View.GONE}"
+            app:srcCompat="@drawable/arrow_forward_grey" />
+    </LinearLayout>
+<!--    <view
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#E1E1E1"/>-->
+
+    </com.rafakob.drawme.DrawMeLinearLayout>
+    </layout>

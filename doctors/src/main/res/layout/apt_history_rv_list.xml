@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.AptHistoryItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:onClick="@{() -> callback.onClick(data)}">
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:background="#F3F3F3"
+        android:layout_alignParentTop="true" />
+    <com.rafakob.drawme.DrawMeTextView
+        android:id="@+id/drawMeTvGender"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@{data.gender}"
+        android:layout_below="@+id/view1"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:typeface="normal"
+        app:dm_backColor="@color/colorAccent"
+        app:dm_radius="28dp" />
+
+    <TextView
+        android:id="@+id/tvSlotTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/drawMeTvGender"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:text="@{data.timeSlot}"
+        android:textColor="#333333"
+        android:textSize="12sp"
+        android:typeface="normal" />
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@{data.date}"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:typeface="normal"
+        android:layout_marginTop="14dp"
+        android:layout_toRightOf="@+id/drawMeTvGender"
+        android:layout_toEndOf="@+id/drawMeTvGender"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp" />
+
+    <com.rafakob.drawme.DrawMeTextView
+        android:id="@+id/tvTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDate"
+        android:layout_marginLeft="30dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/drawMeTvGender"
+        android:layout_toRightOf="@+id/drawMeTvGender"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:text="@{data.testCount}"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        android:typeface="normal"
+        app:dm_backColor="@android:color/white"
+        app:dm_radius="2dp"
+        app:dm_stroke="1dp"
+        app:dm_strokeColor="@color/bright_turquoise" />
+
+    <com.rafakob.drawme.DrawMeTextView
+        android:id="@+id/tvPreception"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvTest"
+        android:layout_alignBottom="@+id/tvTest"
+        android:layout_toEndOf="@+id/tvTest"
+        android:layout_toRightOf="@+id/tvTest"
+        android:layout_marginLeft="2dp"
+        android:paddingBottom="2dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:paddingTop="2dp"
+        android:text="@{data.preCount}"
+        android:textColor="@color/colorAccent"
+        android:textSize="12sp"
+        android:typeface="normal"
+        app:dm_backColor="@android:color/white"
+        app:dm_radius="2dp"
+        app:dm_stroke="1dp"
+        app:dm_strokeColor="@color/bright_turquoise" />
+    <ImageView
+        android:id="@+id/ivForward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view1"
+        android:layout_marginRight="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        app:srcCompat="@drawable/arrow_forward_grey" />
+
+</RelativeLayout>
+    </layout>

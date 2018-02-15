@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<RelativeLayout
+    android:focusable="true"
+    android:clickable="true"
+    android:minHeight="600dp"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:layout_gravity="fill_horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="600dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/torch_red"
+        android:gravity="center"
+        android:id="@+id/linearLayout"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/tvApprovalNotifTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:drawablePadding="5dp"
+            android:drawableLeft="@drawable/not_icon_approv_title"
+            android:gravity="center"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:text="6 Patients Approval Pending"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:gravity="center"
+        android:id="@+id/drawMeLinearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/btnNew"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txt_apt_btn_new"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:background="@drawable/contactus_rectangle_left"
+            android:clickable="true"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/btnOld"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txt_apt_btn_old"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:background="@drawable/white_right"
+            android:paddingLeft="60dp"
+            android:paddingRight="60dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvUpcomingApnt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/drawMeLinearLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
+        android:textSize="12sp"
+        android:padding="5dp"
+        android:layout_marginBottom="5dp"
+        android:text="4 Upcoming Appointment"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:typeface="normal" />
+    <LinearLayout
+        android:id="@+id/llDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvUpcomingApnt"
+        android:orientation="vertical"
+        android:background="#F3F3F3"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Today"
+            android:textAlignment="center"
+            android:textSize="14sp"
+            android:typeface="normal" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvDay"
+            android:layout_centerHorizontal="true"
+            android:text="16 May 2017"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </LinearLayout>
+    <com.think360.pro.healthguru.doctors.customviews.NonSwipeableViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:background="@android:color/white"
+        android:layout_height="0dp"
+        android:layout_weight="1"  />
+        </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
+    <com.rafakob.drawme.DrawMeButton
+        android:id="@+id/btnAddAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_add_new_Apnt"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:dm_backColor="@color/colorAccent"
+        app:dm_backColorDisabled="@android:color/white"
+        app:dm_backColorPressed="@android:color/holo_red_dark"
+        app:dm_shapeRadiusHalfHeight="false"
+        android:layout_alignParentBottom="true" />
+
+
+</RelativeLayout>
+
+    </layout>

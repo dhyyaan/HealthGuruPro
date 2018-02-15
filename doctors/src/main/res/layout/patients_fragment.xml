@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+        <RelativeLayout
+            android:focusable="true"
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_rearch_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="LinearLayoutManager"
+                    android:layout_alignParentTop="true"
+                    android:layout_above="@+id/buttonAddApnt" />
+
+                <com.rafakob.drawme.DrawMeButton
+                    android:id="@+id/buttonAddApnt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/btn_add_new_Apnt"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"
+                    android:typeface="normal"
+                    app:dm_backColor="@color/colorAccent"
+                    app:dm_backColorDisabled="@android:color/white"
+                    app:dm_backColorPressed="@android:color/holo_red_dark"
+                    app:dm_shapeRadiusHalfHeight="false" />
+
+
+        </RelativeLayout>
+
+</layout>

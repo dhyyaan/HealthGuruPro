@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/homepage"
+        android:title="@string/text_home"
+        />
+    <item
+        android:id="@+id/navigation_patients"
+        android:icon="@drawable/nav_icon_profile"
+        android:title="@string/nav_title_patients"
+       />
+
+    <item
+        android:id="@+id/navigation_appointments"
+        android:icon="@drawable/nav_icon_appoinments"
+        android:title="@string/nav_title_appointments"
+      />
+
+    <item
+        android:id="@+id/navigation_blog"
+        android:icon="@drawable/nav_icon_blog"
+        android:title="@string/nav_title_blog"
+       />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/nav_icon_patients"
+        android:title="@string/nav_title_profile"
+       />
+
+
+
+</menu>

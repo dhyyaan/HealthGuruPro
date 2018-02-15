@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#c9c9cb"
+        android:id="@+id/llSearch"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <AutoCompleteTextView
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:paddingStart="4dp"
+            android:paddingLeft="4dp"
+            android:paddingEnd="4dp"
+            android:paddingRight="4dp"
+            android:textSize="14sp"
+            android:hint="@string/txt_search"
+            android:focusable="false"
+            android:id="@+id/autocomplete_country"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/blog_rounded_et_states"/>
+    </LinearLayout>
+    <com.rafakob.drawme.DrawMeLinearLayout
+        android:id="@+id/llInterest"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/llSearch"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/tvChooseInterest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="@string/txt_choose_interest"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:typeface="normal" />
+
+        <ImageView
+            android:id="@+id/ivForward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            app:srcCompat="@drawable/arrow_forward_grey" />
+
+    </com.rafakob.drawme.DrawMeLinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/tvHealthTips"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textAllCaps="true"
+        android:text="@string/txt_health_tips"
+        android:gravity="left"
+        android:background="#E1E1E1"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:layout_below="@+id/llInterest"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_Other"
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:layout_below="@+id/tvHealthTips"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
+    </layout>

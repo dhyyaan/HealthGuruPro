@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <data>
+        <import type="android.view.View"/>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.AddTestItem"/>
+     <!--   <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+      AddTestItem  android:onClick="@{() -> callback.onClick(data)}"
+          android:visibility="@{data.visibility ? View.VISIBLE : View.GONE}"-->
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/llInterest"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edit_text_line_color">
+
+            <TextView
+                android:id="@+id/tvChooseInterest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_weight="1"
+                android:text="@{data.test}"
+                android:textColor="#333333"
+                android:textSize="14sp"
+                android:typeface="normal" />
+            <ToggleButton
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:textOn=""
+                android:textOff=""
+                android:text=""
+                android:layout_marginTop="12dp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_marginEnd="12dp"
+                android:layout_marginStart="12dp"
+                android:background="@drawable/style_toggle_button" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>

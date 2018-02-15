@@ -1,0 +1,3 @@
+include ':app', ':registration', ':doctors', ':chemists'
+
+

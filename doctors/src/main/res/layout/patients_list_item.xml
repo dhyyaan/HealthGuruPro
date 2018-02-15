@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.PatientsItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+
+        <RelativeLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            tools:context="com.think360.pro.healthguru.doctors.activities.DoctorsActivity"
+            android:onClick="@{() -> callback.onClick(data)}">
+
+            <ImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/user_1"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginStart="12dp" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="14dp"
+                android:text="Harpreet Kaur"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:typeface="normal"
+                android:layout_marginStart="8dp"
+                android:layout_toRightOf="@+id/ivProfileImage"/>
+
+            <com.rafakob.drawme.DrawMeTextView
+                android:id="@+id/tvRoleType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="6dp"
+                android:text="Carpotare"
+                app:dm_backColor="@android:color/white"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:textSize="12sp"
+                app:dm_stroke="1dp"
+                app:dm_radius="2dp"
+                app:dm_strokeColor="@color/bright_turquoise"
+                android:textColor="@color/colorAccent"
+                android:layout_toRightOf="@+id/ivProfileImage"
+                android:layout_below="@+id/tvName"
+                android:layout_marginStart="8dp" />
+
+
+            <com.rafakob.drawme.DrawMeTextView
+                android:id="@+id/tvGender"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:text="F"
+                android:textColor="@android:color/white"
+                app:dm_radius="28dp"
+                app:dm_backColor="@color/colorAccent"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_alignParentRight="true"
+               android:layout_alignParentEnd="true"
+                android:layout_marginTop="18dp" />
+
+            <TextView
+                android:id="@+id/tvSlotTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10-11"
+                android:textSize="12sp"
+                android:textStyle="normal"
+                android:typeface="normal"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="#333333"
+                android:layout_below="@+id/tvGender"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:background="#F3F3F3"
+                android:layout_below="@+id/tvSlotTime"/>
+   <!--         android:text="@{data.name}"
+            android:text="@{data.role}"
+            android:text="@{data.timeSlot}"
+            android:text="@{data.gender}"-->
+        </RelativeLayout>
+</layout>

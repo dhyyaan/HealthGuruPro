@@ -1,0 +1,105 @@
+<resources>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="nav_title_patients">Patients</string>
+    <string name="nav_title_appointments">Appointments</string>
+    <string name="nav_title_blog">Blog</string>
+    <string name="nav_title_profile">Profile</string>
+    <string name="txt_morning">Morning</string>
+    <string name="txt_evening">Evening</string>
+    <string name="btn_add_patients">+ Add Patients</string>
+    <string name="btn_add_appointments">+ Add Appointments</string>
+    <string name="txt_lab_near_u">Lab Near By You</string>
+    <string name="btn_add_new_Apnt">+ Add New Appointment</string>
+    <string name="txt_by_u">By You</string>
+    <string name="txt_others">Others</string>
+    <string name="txt_choose_interest">Choose Interest</string>
+    <string name="txt_health_tips">Health Tips</string>
+    <string name="txt_contact_us">Contact Admin</string>
+    <string name="txt_title_settings">Settings</string>
+    //profile string
+    <string name="txt_name">Name</string>
+    <string name="txt_patient_name">Patient Name</string>
+    <string name="txt_phone_number">Phone Number</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_choose_time_slot">Choose Time Slot</string>
+    <string name="txt_choose_days">Choose Days</string>
+    <string name="txt_app_pics">App Pics</string>
+    <string name="btn_add_more">Add More</string>
+    <string name="btn_save">Save</string>
+    <string name="txt_s">S</string>
+    <string name="txt_m">M</string>
+    <string name="txt_tu">T</string>
+    <string name="txt_w">W</string>
+    <string name="txt_t">T</string>
+    <string name="txt_f">F</string>
+    <string name="txt_su">S</string>
+    //Procedure list and procedure packages
+    <string name="txt_Procedure_list">Procedure List</string>
+    <string name="txt_Procedure_packages">Procedure Packages</string>
+
+    <string name="collapsed">collapsed: %s</string>
+    <string name="expanded">expanded: %s</string>
+    <string name="txt_add_new_procedure_list">+ ADD NEW PROCEDURE LIST</string>
+    <string name="txt_add_new_procedure_package">+ ADD NEW PROCEDURE PACKAGES</string>
+    <string name="txt_not_product_not">Product Notifications</string>
+    <string name="txt_not_appointments">Appointments</string>
+    <string name="txt_not_feedback">Feedback</string>
+    <string name="txt_not_blog_likes">Blog Likes</string>
+    <string name="txt_not_reset_not_settings">Reset Notification Settings</string>
+    <string name="txt_feedback_rating">Rating</string>
+    <string name="txt_feedback_doc_treat">Doctor Treatment</string>
+    <string name="txt_feedback_staff_hospatipility">Staff Hospitality</string>
+    <string name="txt_feedback_latest_feedback">Latest Feedback</string>
+    <string name="txt_btn_submit">Submit</string>
+    <string name="txt_btn_feedback_report">Report</string>
+    <string name="txt_age">Age</string>
+    <string name="txt_gender">Gender</string>
+    <string name="txt_rb_male">Male</string>
+    <string name="txt_rb_female">Female</string>
+
+    <string name="txt_apt_date">Appointment Date</string>
+    <string name="txt_apt_time">Appointment Time</string>
+
+    <string name="txt_title_new_patient">Add New Patient</string>
+    <string name="txt_title_new_apt">Add New Appointment</string>
+
+    <string name="txt_apt_btn_new">New</string>
+    <string name="txt_apt_btn_old">Old</string>
+    <string name="txt_pp_btn_add_test">+ Add Test</string>
+    <string name="txt_pp_btn_add_precrip">+ Add Prescription</string>
+    <string name="txt_pp_precription">Prescription</string>
+
+    <string name="txt_lab_near_by_u">Labs Near By You</string>
+    <string name="txt_feedback_report">Feedback Report</string>
+    <string name="txt_type_message">Type Message</string>
+    <string name="txt_search">Search</string>
+    <string name="txt_health_topic">Health Topic</string>
+    <string name="txt_btn_add_test">+ Add More Test</string>
+    <string name="txt_title_apt_history">Appointment History</string>
+    <string name="txt_popular_test">Popular Test</string>
+    <string name="txt_preception">Preception</string>
+    <string name="txt_view_report">View Report</string>
+    <string name="btn_add_more_plus">+Add More</string>
+    <string name="btn_done">Done</string>
+
+    <string name="txt_title_notification">Notifications</string>
+    <string name="txt_title_apt_request">Appointment Request</string>
+    <string name="txt_title_patient">Patient</string>
+    <string name="txt_add_new_procedure_pkg">Add New Procedure Packages</string>
+
+    <string name="txt_package_name">Package Name</string>
+    <string name="txt_package_details">Package Details</string>
+    <string name="txt_procedure_list_name">Procedure List Name</string>
+    <string name="txt_add_new_procedure_list2">Add New Procedure List</string>
+    <string name="txt_add_sublisting">Add Sub Listing</string>
+    <string name="txt_sublisting">Sub Listing</string>
+    <string name="txt_price">Price</string>
+    <string name="txt_related_post">Related Post</string>
+    <string name="ok">OK</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission. The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="text_enter_user_id">Enter User ID</string>
+    <string name="text_scan_code">Point at HealthGuru QR code to scan</string>
+    <string name="text_home">Home</string>
+</resources>

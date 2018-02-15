@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:padding="8dp"
+        android:background="@color/bright_turquoise"
+        android:id="@+id/linearLayout5">
+
+        <ImageView
+            android:id="@+id/ivCancel"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            app:srcCompat="@drawable/close" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="normal"
+            android:typeface="normal"
+            android:textColor="@color/colorAccent"
+            android:text="Urine Routine Examination" />
+        <com.rafakob.drawme.DrawMeTextView
+            android:id="@+id/tvSelect"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:text="✓"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            app:dm_radius="28dp"
+            app:dm_backColor="@color/colorAccent"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textAlignment="center"
+            android:textStyle="normal"
+            android:typeface="normal" />
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/rlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:layout_below="@+id/linearLayout5"
+        >
+
+
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/user_1"
+            android:layout_toRightOf="@+id/togleBtn"
+            android:layout_below="@+id/view"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="16dp" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Harpreet Kaur"
+            android:textColor="@android:color/black"
+            android:textSize="14sp"
+            android:textStyle="normal"
+            android:typeface="normal"
+            android:layout_alignTop="@+id/ivProfileImage"
+            android:layout_toRightOf="@+id/ivProfileImage"
+            android:layout_toEndOf="@+id/ivProfileImage"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" />
+
+
+        <com.rafakob.drawme.DrawMeTextView
+            android:id="@+id/tvRoleType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="14dp"
+            android:text="Carpotare"
+            app:dm_backColor="@android:color/white"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textSize="12sp"
+            app:dm_stroke="1dp"
+            app:dm_radius="2dp"
+            app:dm_strokeColor="@color/bright_turquoise"
+            android:textColor="@color/colorAccent"
+            android:layout_toRightOf="@+id/ivProfileImage"
+            android:layout_below="@+id/tvName"
+            android:layout_marginStart="8dp" />
+
+
+    </RelativeLayout>
+    <com.think360.pro.healthguru.doctors.utils.ZoomInOutImageView
+        android:id="@+id/ivReport"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlLayout"
+        android:scaleType="fitXY"
+       />
+</RelativeLayout>

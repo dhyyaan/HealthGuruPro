@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
+    android:focusable="true"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:id="@+id/drawMeLinearLayout"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvDate"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/txtBtnProcedureList"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/contactus_rectangle_left"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="@string/txt_Procedure_list"
+            android:textAllCaps="true"
+            android:textAlignment="center"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/txtBtnProcedurePackages"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txt_Procedure_packages"
+            android:textSize="12sp"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:background="@drawable/white_right"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="#F3F3F3"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/drawMeLinearLayout" />
+    <com.think360.pro.healthguru.doctors.customviews.NonSwipeableViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="14dp"
+        android:layout_below="@+id/drawMeLinearLayout" />
+
+</RelativeLayout>
+    </layout>

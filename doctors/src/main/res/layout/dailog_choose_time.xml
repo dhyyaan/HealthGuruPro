@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.rafakob.drawme.DrawMeRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:dm_backColor="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+   android:layout_gravity="center"
+    app:dm_stroke="1dp"
+    app:dm_strokeColor="@android:color/white"
+    app:dm_radius="2dp"
+    android:layout_margin="28dp">
+
+    <TextView
+        android:id="@+id/tvDailogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:text="Assign Time Slot"
+        android:textAlignment="center"
+        android:textColor="@android:color/black"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/tvMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvDailogTitle"
+        android:layout_marginLeft="55dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="14dp"
+        android:textSize="12sp"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:text="@string/txt_morning"
+        android:typeface="normal" />
+
+    <TextView
+        android:id="@+id/tvEvening"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/tvMorning"
+        android:textAllCaps="true"
+        android:textSize="12sp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:textColor="@android:color/black"
+        android:text="@string/txt_evening" />
+
+    <LinearLayout
+        android:id="@+id/llTimeSlot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvEvening"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="12dp"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</com.rafakob.drawme.DrawMeRelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:focusable="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.think360.pro.healthguru.doctors.customviews.expandablelistview.SwipeMenuExpandableListView
+            android:id="@+id/listView"
+            android:groupIndicator="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/btnAddProcedureList" />
+
+        <com.rafakob.drawme.DrawMeButton
+            android:id="@+id/btnAddProcedureList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="@string/txt_add_new_procedure_list"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:typeface="normal"
+            app:dm_backColor="@color/colorAccent"
+            app:dm_backColorDisabled="@android:color/white"
+            app:dm_backColorPressed="@android:color/holo_red_dark"
+            app:dm_shapeRadiusHalfHeight="false" />
+
+    </RelativeLayout>
+</layout>

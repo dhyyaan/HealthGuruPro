@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"/>
+        <variable name="data" type="com.think360.pro.healthguru.doctors.model.PatientProfileItem"/>
+        <variable name="callback" type="com.think360.pro.healthguru.doctors.interfaces.ActionCallback"/>
+    </data>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+<View
+    android:id="@+id/view1"
+    android:layout_width="match_parent"
+    android:layout_height="0.5dp"
+    android:background="#E1E1E1"
+    android:layout_alignParentTop="true"/>
+        <ImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/scan_qr" />
+        <com.rafakob.drawme.DrawMeTextView
+            android:id="@+id/tvCount"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="@{data.count}"
+            android:gravity="center"
+            app:dm_radius="28dp"
+            android:textSize="12sp"
+            android:visibility="@{data.CVisivility ?   View.VISIBLE :View.GONE }"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:layout_toRightOf="@+id/ivProfile"
+            android:textColor="@color/colorAccent"
+            app:dm_backColor="@color/bright_turquoise"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/tvProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_toEndOf="@+id/tvCount"
+            android:layout_toRightOf="@+id/tvCount"
+            android:text="@{data.profileName}"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="14sp" />
+        <com.rafakob.drawme.DrawMeTextView
+            android:id="@+id/tvOk"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_toEndOf="@+id/tvProfile"
+            android:layout_toRightOf="@+id/tvProfile"
+            android:layout_alignParentTop="true"
+            android:textSize="12sp"
+            android:paddingTop="2dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="2dp"
+            android:text="@{data.ok}"
+            android:gravity="center"
+            app:dm_radius="2dp"
+            android:visibility="@{data.oKVisivility ?   View.VISIBLE :View.GONE }"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/colorAccent"
+            app:dm_backColor="@color/bright_turquoise"
+            android:textAlignment="center" />
+        <ImageView
+            android:id="@+id/ivForward"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/view1"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/arrow_forward_grey" />
+        <View
+            android:id="@+id/view2"
+            android:layout_below="@+id/ivForward"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#E1E1E1" />
+    </RelativeLayout>
+</layout>

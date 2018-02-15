@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:focusable="true"
+    android:clickable="true"
+    android:focusableInTouchMode="true"
+    android:background="@android:color/white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:layout_gravity="fill_horizontal"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="600dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="0dp"
+        android:layout_marginLeft="0dp"
+        android:gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:id="@+id/llTxtBtn"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/tvBtnByU"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txt_by_u"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:background="@drawable/contactus_rectangle_left"
+            android:clickable="true"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:textColor="@android:color/white" />
+        <TextView
+            android:id="@+id/tvBtnOthers"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/txt_others"
+            android:textAllCaps="true"
+            android:clickable="true"
+            android:gravity="center"
+            android:background="@drawable/white_right"
+            android:paddingLeft="45dp"
+            android:paddingRight="45dp"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent" />
+    </LinearLayout>
+    <com.think360.pro.healthguru.doctors.customviews.NonSwipeableViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="14dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</RelativeLayout>
+    </layout>

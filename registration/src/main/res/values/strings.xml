@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Registration</string>
+    <string name="txt_enter_mobile_no">Enter your 10-digit mobile number</string>
+    <string name="bt_next">Next</string>
+    <string name="err_tel">Incorrect mobile no.</string>
+    <string name="txt_enter_otp">Enter OTP sent to your registered mobile number</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="txt_valid_for">Valid for 60 seconds</string>
+    <string name="txt_gen_otp_again">Generate OTP again</string>
+    <string name="action_settings">Settings</string>
+</resources>
